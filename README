@@ -16,7 +16,7 @@ It is designed to be built from the command line using arduino-cli (and a
 Makefile wrapper) rather than the Arduino IDE.
 
 This code has been derived from the standard uBitxv6 code (written by by Asshar
-Farhan https://github.com/afarhan/ubitxv6).  Like Asshar's code it is released
+Farhan <https://github.com/afarhan/ubitxv6>).  Like Asshar's code it is released
 under the same GPL v3 Licence.
 
 
