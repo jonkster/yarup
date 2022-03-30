@@ -1,6 +1,6 @@
 # YARUP
 
-## Yet Another Raduino Ubitx Program
+## Yet Another Raduino Ubitx Program, using Nano Every
 
 ----
 
