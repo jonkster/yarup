@@ -56,7 +56,7 @@ void checkChanges(void) {
 }
 
 int getEncoderDir(void) {
-	int mag = (encoderPos - encoderLastPos);
+	int mag = (encoderLastPos - encoderPos);
 	encoderLastPos = encoderPos;
 	if (fast) {
 		return mag * 3;
