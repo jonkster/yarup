@@ -15,9 +15,8 @@ this with the uBitx v6 Radio.
 It is designed to be built from the command line using arduino-cli (and a
 Makefile wrapper) rather than the Arduino IDE.
 
-The code has been derived from the standard uBitxv6 code by Asshar Farhan.
-
-Like the original code it is released under the same GPL v3 Licence.
+This code has been derived from the standard uBitxv6 code (written by by Asshar
+Farhan).  Like Asshar's code it is released under the same GPL v3 Licence.
 
 It is not meant to supplant the original system and is largely a cut and paste
 of Asshar's code (at least the initial version) only re-arranged to use with
