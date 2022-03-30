@@ -41,3 +41,41 @@ It may evolve over time.
 
 Jon
 
+# How to Build the Program
+
+1. Install arduino-cli
+	see https://arduino.github.io/arduino-cli/0.21/installation/
+
+2. Clone the repository
+
+3. do:
+```
+make compile
+```
+
+4. Assuming no problems you can then install it on a Nano every Board
+
+# Installing
+
+1. Make sure you have an Arduino Every Board.  NB iWhen preparing the board,
+   the headers need to be installed the same as the standard Raduino Nano board
+	(ie with the pins "upside down").
+
+2. Connect to PC
+
+3. Do:
+```
+make upload
+```
+
+4. Hopefully it should upload the image to the board.  The board should be a simple swap with the original board.
+
+----
+
+# Can it be used with the Arduino IDE?
+
+Probably... you may need to shuffle bits around - I will look at this later and
+see what is involved.  I find the Arduino IDE gets in my way, mostly because I
+am a dinosaur who refuses to evolve :)
+
+
