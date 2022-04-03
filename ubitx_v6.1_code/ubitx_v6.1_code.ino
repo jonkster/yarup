@@ -9,7 +9,7 @@
 #include "setup.h"
 #include "keyer.h"
 
-#define MONITOR_BAUD 115200
+#define MONITOR_BAUD 38400
 
 #define ENC_A		(A0)
 #define ENC_B		(A1)
@@ -432,7 +432,9 @@ void doTuning() {
 	doingCAT = 0; // go back to manual mode if you were doing CAT
 	prev_freq = frequency;
 
+	frequency += 50l * s;
 
+/*****   drop encoder speed calcs
 	if (s > 10)
 		frequency += 200l * s;
 	else if (s > 5)
@@ -445,6 +447,7 @@ void doTuning() {
 		frequency += 100l * s;
 	else if (s  < 0)
 		frequency += 50l * s;
+*******/
 
 	if (prev_freq < 10000000l && frequency > 10000000l)
 		isUSB = true;
@@ -620,16 +623,13 @@ void setup() {
 
 
 void loop() { 
-	Serial.print(".");
 	if (cwMode) {
 		cwKeyer(); 
 	} else if (!txCAT) {
 		checkPTT();
 	}
 
-	Serial.print("-");
 	checkButton();
-	Serial.print("/");
 
 	if (! inTx){
 		if (ritOn) {
@@ -639,7 +639,6 @@ void loop() {
 		}
 		checkTouch();
 	}
-	Serial.print("\\");
 
 	checkCAT();
 

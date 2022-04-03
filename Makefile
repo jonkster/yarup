@@ -54,6 +54,7 @@ $(info HDRS       is [${HDRS}])
 $(info BIN        is [${BIN}])
 $(info SERIAL_DEV is [${SERIAL_DEV}])
 
+
 all: $(ELF) compile
 .PHONY: all
 
