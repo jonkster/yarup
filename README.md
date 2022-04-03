@@ -11,8 +11,8 @@ Every* Board (intead of the original Nano) and used in the uBitx v6 Radio HF
 The Arduino Every is a pin compatible version of the Arduino Nano but uses a
 more powerful processor and has some differences from the original Nano.
 
-No hardware changes (other than swapping the Nano board) are required to use
-this with the uBitx v6 Radio.
+No hardware changes (other than swapping the Nano board and using a different
+style USB cable) are required to use this with the uBitx v6 Radio.
 
 It is designed to be built from the command line using arduino-cli (and a
 Makefile wrapper) rather than the Arduino IDE.
@@ -46,22 +46,41 @@ Jon
 1. Install arduino-cli
 	see https://arduino.github.io/arduino-cli/0.21/installation/
 
+NB you will need to install the approriate cores for Nano Every.
+
+```
+arduino-cli core install arduino:megaavr
+```
+
+If you install using snap, you may need to do a couple of extra steps
+
+or it will balk when you do a make upload:
+```
+snap connect arduino-cli:raw-usb
+```
+and
+```
+snap connect arduino-cli:serial-port
+```
+
+
 2. Clone the repository
 
 3. do:
 ```
 make compile
 ```
-
-4. Assuming no problems you can then install it on a Nano every Board
+This will build the image ready to upload to the Arduino board.  Assuming no
+problems in the compile you can install it on a Nano every Board.
 
 # Installing
 
-1. Make sure you have an Arduino Every Board.  NB iWhen preparing the board,
-   the headers need to be installed the same as the standard Raduino Nano board
-	(ie with the pins "upside down").
+1. Make sure you have an Arduino Every Board.  NB When preparing the board,
+the headers need to be installed the same as the standard Raduino Nano board
+(ie with the pins "upside down" - the reset button will be effectively on the
+underside of the board when it gets installed in the uBitx radio).
 
-2. Connect to PC
+2. Connect the Nano Every to PC via USB cable.
 
 3. Do:
 ```
